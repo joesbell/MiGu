@@ -1,0 +1,27 @@
+@function pxTorem($px){//$px为需要转换的字号
+  @return $px / 75 * 1rem;
+}
+@mixin auto-font($font-size){
+  font-size: $font-size ;
+  [data-dpr="1"] & {
+    font-size: $font-size/1.8;
+  }
+  [data-dpr="2"] & {
+    font-size: $font-size;
+  }
+  [data-dpr="2.625"] & {
+    font-size: $font-size*1.2;
+  }
+  [data-dpr="2.75"] & {
+    font-size: $font-size*1.2;
+  }
+  [data-dpr="3"] & {
+    font-size:  $font-size*1.4;
+  }
+  [data-dpr="3.5"] & {
+    font-size:  $font-size*1.6;
+  }
+  [data-dpr="4"] & {
+    font-size: $font-size*1.6;
+  }
+}
